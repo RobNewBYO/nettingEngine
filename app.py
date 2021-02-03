@@ -15,7 +15,7 @@ from streamlit.report_thread import get_report_ctx
 ctx = get_report_ctx()
 session_id = ctx.session_id
 
-# from pivottablejs import pivot_ui
+from pivottablejs import pivot_ui
 
 ## Inputs
 
@@ -73,7 +73,7 @@ if st.sidebar.button('run'):
                 print('Successfully retrieved results from ' + x['PCC'])
                 results = results.append(tempresults, ignore_index = True)
     
-    t = func.pivot_ui(results, rows = ['carrier'], cols = ['pcc'], vals = ['totalamount'])
+    t = pivot_ui(results, rows = ['carrier'], cols = ['pcc'], vals = ['totalamount'])
     st.markdown('## Results')
     with open(t.src) as t:
         components.html(t.read(), width = 1500, height = 1000, scrolling = True)
