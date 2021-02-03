@@ -1,6 +1,8 @@
 ## Designed to take the output of a BFM and net everything down
 import os
-## os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/')
+import platform
+if platform.system()=='Windows':
+    os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/')
 
 import pandas as pd
 # import json
@@ -15,7 +17,7 @@ from streamlit.report_thread import get_report_ctx
 ctx = get_report_ctx()
 session_id = ctx.session_id
 
-from pivottablejs import pivot_ui
+# from pivottablejs import pivot_ui
 
 ## Inputs
 
@@ -78,5 +80,10 @@ if st.sidebar.button('run'):
     with open(t.src) as t:
         components.html(t.read(), width = 1500, height = 1000, scrolling = True)
 
+
+## To do
+## Add more parameters
+## Netting down
+## save results
 
 
