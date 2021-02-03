@@ -5,7 +5,6 @@ import datetime
 import json
 import pandas as pd
 import numpy as np
-# import pivottablejs
 
 ## Basic base64 encoding
 def encodeme(message):
