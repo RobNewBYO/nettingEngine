@@ -1,6 +1,6 @@
 ## Designed to take the output of a BFM and net everything down
 import os
-os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/')
+## os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/')
 
 import pandas as pd
 # import json
