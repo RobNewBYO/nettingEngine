@@ -2,7 +2,7 @@
 import os
 import platform
 if platform.system()=='Windows':
-    os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/')
+    os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine_local/')
 
 import pandas as pd
 # import json
