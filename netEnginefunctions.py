@@ -127,20 +127,20 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
         
         ## merge in locations
         locs = pd.read_csv('locations.csv')
-        locs = locs[['AirportCode','CountryName']]
+        locs = locs[['AirportCode','CountryCode']]
         locs = locs.drop_duplicates(subset = ['AirportCode'])
         
         results['route'] = results['originAirport']+"-"+results['destinationAirport']
         
         results = pd.merge(results, locs, left_on = 'originAirport', right_on = 'AirportCode', how = 'left')
         results = results.drop(columns = ['AirportCode'])
-        results.columns = results.columns.str.replace('CountryName','originCountry')
+        results.columns = results.columns.str.replace('CountryCode','originCountry')
         
         results = pd.merge(results, locs, left_on = 'destinationAirport', right_on = 'AirportCode', how = 'left')
         results = results.drop(columns = ['AirportCode'])
-        results.columns = results.columns.str.replace('CountryName','destinationCountry')
+        results.columns = results.columns.str.replace('CountryCode','destinationCountry')
         
-        results['tripType'] = np.where(results['originCountry']==results['destinationCountry'],'DOM', np.where(results['originCountry'].isin(['Australia','New Zealand']) & results['destinationCountry'].isin(['Australia','New Zealand']),'TT','INT'))
+        results['tripType'] = np.where(results['originCountry']==results['destinationCountry'],'DOM', np.where(results['originCountry'].isin(['AU','NZ']) & results['destinationCountry'].isin(['AU','NZ']),'TT','INT'))
         
         return results
 

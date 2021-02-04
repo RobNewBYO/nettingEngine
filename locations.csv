@@ -1,4 +1,4 @@
-ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode,LatLng,CountryName,TimeZone,Weight,IsSuspicious,DBSource
+ID,ICAOCode,CityCode,CityName,State,CountryCode,AirportCode,AirportName,LocationCode,LatLng,CountryName,TimeZone,Weight,IsSuspicious,DBSource
 50175,NULL,HAR,Harrisburg,NULL,US,USA,MDT,NULL,NULL,United States,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 45834,NULL,AAA,Anaa,,PF,AAA,Anaa Airport,2,NULL,French Polynesia,Pacific/Gambier,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 40665,NULL,AAB,Arrabury,,AU,AAB,,2,NULL,Australia,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -1684,7 +1684,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 44029,NULL,CYA,Les Cayes,,HT,CYA,,2,NULL,Haiti,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 44836,NULL,CYB,Cayman Brac,,KY,CYB,Charles Kirkconnell International Airport,2,NULL,Cayman Islands,GMT-5,936,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 41784,NULL,CYC,Caye Chapel,,BZ,CYC,,2,NULL,Belize,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
-50165,NULL,CYD,"San Ignacio ",NULL,BZ,CYD,San Ignacio Town Airstrip,2,NULL,Belize,America/Belize,1656,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
+50165,NULL,CYD,San Ignacio ,NULL,BZ,CYD,San Ignacio Town Airstrip,2,NULL,Belize,America/Belize,1656,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 47770,NULL,CYE,Crystal Lake,,US,CYE,,2,NULL,United States,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 47612,NULL,CYF,Chefornak,,US,CYF,Sea Plane Base,2,NULL,United States,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 40776,NULL,CYG,Corryong,,AU,CYG,,2,NULL,Australia,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -3792,7 +3792,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 47191,NULL,KHU,Kremenchuk,,UA,KHU,,2,NULL,Ukraine,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 46560,NULL,KHV,Khabarovsk,,RU,KHV,Novy Airport,2,NULL,Russian Federation,Asia/Vladivostok,833,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 41760,NULL,KHW,Khwai River Lodge,,BW,KHW,,2,NULL,Botswana,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
-50166,NULL,KHX,"Kihihi ",NULL,UG,KHX,Kihihi Airstrip,2,NULL,Uganda,Africa/Kampala,1675,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
+50166,NULL,KHX,Kihihi ,NULL,UG,KHX,Kihihi Airstrip,2,NULL,Uganda,Africa/Kampala,1675,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 44462,NULL,KHY,Khoy,,IR,KHY,,2,NULL,"Iran, Islamic Republic of",NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 45850,NULL,KHZ,Kauehi,,PF,KHZ,,2,NULL,French Polynesia,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 46025,NULL,KIA,Kaiapit,,PG,KIA,,2,NULL,Papua New Guinea,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -4039,7 +4039,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 50167,NULL,KTJ,Kichwa Tembo,NULL,KE,KTJ,Kichwa Tembo Airport,2,NULL,Kenya,Africa/Nairobi,1679,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 46036,NULL,KTK,Kanua,,PG,KTK,,2,NULL,Papua New Guinea,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 44728,NULL,KTL,Kitale,,KE,KTL,,2,NULL,Kenya,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
-50077,NULL,KTM,Kathmandu," ",NP,KTM,Tribhuvan International Airport,2,"27.6980899, 85.3592231",Nepal,Asia/Kathmandu,78,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
+50077,NULL,KTM,Kathmandu, ,NP,KTM,Tribhuvan International Airport,2,"27.6980899, 85.3592231",Nepal,Asia/Kathmandu,78,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 48382,NULL,KTN,Ketchikan,,US,KTN,Ketchikan Intl Arpt,1,NULL,United States,America/Juneau,1293,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 43960,NULL,KTO,Kato,,GY,KTO,,2,NULL,Guyana,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 44596,NULL,KIN,Kingston,,JM,KTP,Tinson Arpt,2,NULL,Jamaica,America/Jamaica,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -8629,7 +8629,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 46299,NULL,XCN,Coron,,PH,XCN,,2,NULL,Philippines,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 40758,NULL,XCO,Colac,,AU,XCO,,2,NULL,Australia,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 43611,NULL,PAR,Paris,,FR,XCR,Chalons-Vatry,2,NULL,France,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
-50085,NULL,XDB,Lille Europe Railway Station," ",FR,XDB,Lille Europe Railway Station,2,NULL,France,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
+50085,NULL,XDB,Lille Europe Railway Station, ,FR,XDB,Lille Europe Railway Station,2,NULL,France,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 41310,NULL,XDE,Diebougou,,BF,XDE,,2,NULL,Burkina Faso,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 41311,NULL,XDJ,Djibo,,BF,XDJ,,2,NULL,Burkina Faso,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 50117,NULL,XDL,Chandler,NULL,CA,XDL,Chandler Rail Station,NULL,NULL,Canada,America/Montreal,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -8666,7 +8666,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 50137,NULL,XGY,Grimsby,NULL,CA,XGY,Grimsby Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 50138,NULL,XHM,Georgetown,NULL,CA,XHM,Georgetown Rail Station,NULL,NULL,Canada,America/Halifax,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 50139,NULL,XHS,Chemainus,NULL,CA,XHS,Chemainus Rail Station,NULL,NULL,Canada,America/Vancouver,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
-50172,NULL,XHV,"BraÈ™ov ",NULL,RO,XHV,BraÈ™ov Airport,2,NULL,Romania,Europe/Bucharest,1727,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
+50172,NULL,XHV,BraÈ™ov ,NULL,RO,XHV,BraÈ™ov Airport,2,NULL,Romania,Europe/Bucharest,1727,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 50140,NULL,XIA,Guelph,NULL,CA,XIA,Guelph Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 50141,NULL,XIB,Ingersoll,NULL,CA,XIB,Ingersoll Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
 42797,NULL,XIC,Xichang,,CN,XIC,,2,NULL,China,NULL,0,0,aby-prod-sqlmi01.9558381cc5a7.database.windows.net
@@ -11067,7 +11067,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 44029,NULL,CYA,Les Cayes,,HT,CYA,,2,NULL,Haiti,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 44836,NULL,CYB,Cayman Brac,,KY,CYB,Charles Kirkconnell International Airport,2,NULL,Cayman Islands,GMT-5,936,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 41784,NULL,CYC,Caye Chapel,,BZ,CYC,,2,NULL,Belize,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
-50165,NULL,CYD,"San Ignacio ",NULL,BZ,CYD,San Ignacio Town Airstrip,2,NULL,Belize,America/Belize,1656,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
+50165,NULL,CYD,San Ignacio ,NULL,BZ,CYD,San Ignacio Town Airstrip,2,NULL,Belize,America/Belize,1656,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 47770,NULL,CYE,Crystal Lake,,US,CYE,,2,NULL,United States,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 47612,NULL,CYF,Chefornak,,US,CYF,Sea Plane Base,2,NULL,United States,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 40776,NULL,CYG,Corryong,,AU,CYG,,2,NULL,Australia,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
@@ -13175,7 +13175,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 47191,NULL,KHU,Kremenchuk,,UA,KHU,,2,NULL,Ukraine,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 46560,NULL,KHV,Khabarovsk,,RU,KHV,Novy Airport,2,NULL,Russian Federation,Asia/Vladivostok,833,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 41760,NULL,KHW,Khwai River Lodge,,BW,KHW,,2,NULL,Botswana,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
-50166,NULL,KHX,"Kihihi ",NULL,UG,KHX,Kihihi Airstrip,2,NULL,Uganda,Africa/Kampala,1675,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
+50166,NULL,KHX,Kihihi ,NULL,UG,KHX,Kihihi Airstrip,2,NULL,Uganda,Africa/Kampala,1675,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 44462,NULL,KHY,Khoy,,IR,KHY,,2,NULL,"Iran, Islamic Republic of",NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 45850,NULL,KHZ,Kauehi,,PF,KHZ,,2,NULL,French Polynesia,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 46025,NULL,KIA,Kaiapit,,PG,KIA,,2,NULL,Papua New Guinea,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
@@ -13422,7 +13422,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 50167,NULL,KTJ,Kichwa Tembo,NULL,KE,KTJ,Kichwa Tembo Airport,2,NULL,Kenya,Africa/Nairobi,1679,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 46036,NULL,KTK,Kanua,,PG,KTK,,2,NULL,Papua New Guinea,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 44728,NULL,KTL,Kitale,,KE,KTL,,2,NULL,Kenya,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
-50077,NULL,KTM,Kathmandu," ",NP,KTM,Tribhuvan International Airport,2,"27.6980899, 85.3592231",Nepal,Asia/Kathmandu,78,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
+50077,NULL,KTM,Kathmandu, ,NP,KTM,Tribhuvan International Airport,2,"27.6980899, 85.3592231",Nepal,Asia/Kathmandu,78,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 48382,NULL,KTN,Ketchikan,,US,KTN,Ketchikan Intl Arpt,1,NULL,United States,America/Juneau,1293,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 43960,NULL,KTO,Kato,,GY,KTO,,2,NULL,Guyana,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 44596,NULL,KIN,Kingston,,JM,KTP,Tinson Arpt,2,NULL,Jamaica,America/Jamaica,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
@@ -18012,7 +18012,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 46299,NULL,XCN,Coron,,PH,XCN,,2,NULL,Philippines,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 40758,NULL,XCO,Colac,,AU,XCO,,2,NULL,Australia,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 43611,NULL,PAR,Paris,,FR,XCR,Chalons-Vatry,2,NULL,France,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
-50085,NULL,XDB,Lille Europe Railway Station," ",FR,XDB,Lille Europe Railway Station,2,NULL,France,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
+50085,NULL,XDB,Lille Europe Railway Station, ,FR,XDB,Lille Europe Railway Station,2,NULL,France,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 41310,NULL,XDE,Diebougou,,BF,XDE,,2,NULL,Burkina Faso,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 41311,NULL,XDJ,Djibo,,BF,XDJ,,2,NULL,Burkina Faso,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 50117,NULL,XDL,Chandler,NULL,CA,XDL,Chandler Rail Station,NULL,NULL,Canada,America/Montreal,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
@@ -18049,7 +18049,7 @@ ID,ICAOCode,CityCode,CityName,State,Country,AirportCode,AirportName,LocationCode
 50137,NULL,XGY,Grimsby,NULL,CA,XGY,Grimsby Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 50138,NULL,XHM,Georgetown,NULL,CA,XHM,Georgetown Rail Station,NULL,NULL,Canada,America/Halifax,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 50139,NULL,XHS,Chemainus,NULL,CA,XHS,Chemainus Rail Station,NULL,NULL,Canada,America/Vancouver,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
-50172,NULL,XHV,"BraÈ™ov ",NULL,RO,XHV,BraÈ™ov Airport,2,NULL,Romania,Europe/Bucharest,1727,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
+50172,NULL,XHV,BraÈ™ov ,NULL,RO,XHV,BraÈ™ov Airport,2,NULL,Romania,Europe/Bucharest,1727,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 50140,NULL,XIA,Guelph,NULL,CA,XIA,Guelph Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 50141,NULL,XIB,Ingersoll,NULL,CA,XIB,Ingersoll Rail Station,NULL,NULL,Canada,America/Toronto,10000,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
 42797,NULL,XIC,Xichang,,CN,XIC,,2,NULL,China,NULL,0,0,byo-prod-sqlmi01.7d0116b75694.database.windows.net
