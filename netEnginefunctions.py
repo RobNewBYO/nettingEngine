@@ -5,6 +5,9 @@ import datetime
 import json
 import pandas as pd
 import numpy as np
+from streamlit.report_thread import get_report_ctx
+ctx = get_report_ctx()
+session_id = ctx.session_id
 
 ## Basic base64 encoding
 def encodeme(message):
@@ -143,6 +146,41 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
         results['tripType'] = np.where(results['originCountry']==results['destinationCountry'],'DOM', np.where(results['originCountry'].isin(['AU','NZ']) & results['destinationCountry'].isin(['AU','NZ']),'TT','INT'))
         
         return results
+
+## Apply rules
+def rulesmeup(df, dmnRules):
+    keep_cols = ['pcc', 'carrier', 'totalPrice', 'baseFare', 'tax', 'originAirport', 'destinationAirport',
+           'departureDateTime', 'returnDateTime', 'numberOfSegments', 'cabinClass', 'route', 'originCountry',
+           'destinationCountry', 'tripType']
+    
+    df = df[keep_cols]
+    
+    results = None
+    
+    ## Run rules
+    for x in df.index:
+        df_dict = df.iloc[x].to_dict()
+        (status, newData) = dmnRules.decide(df_dict)
+        if len(newData)>0:
+            temp = newData[len(newData)-1]['Result']
+            if results is None:
+                results = pd.DataFrame([temp])
+            else:
+                results = results.append(pd.DataFrame([temp]), ignore_index = True)
+    
+    return results
+
+## Calculate Net Price
+def calculateNets(df, Currency, session_id = session_id):
+    from forex_python.converter import CurrencyRates
+    c = CurrencyRates().get_rate('USD', Currency)
+    df['upfrontCommissionAmount'] = df['upfrontCommission']/100 * df['baseFare']
+    df['backendCommissionAmount'] = df['backendCommission']/100 * df['baseFare']
+    df['segmentEarningsAmount'] = (df['segmentEarnings']*c)*df['numberOfSegments']
+    df['netPrice'] = round(df['totalPrice'] - (df['upfrontCommissionAmount'] + df['backendCommissionAmount'] + df['segmentEarningsAmount']),2)
+    
+    return df
+    
 
 ## Overrides pivot_ui function to avoid the 'null value' issue.    
 ## https://github.com/nicolaskruchten/jupyter_pivottablejs/issues/52#issuecomment-528409060

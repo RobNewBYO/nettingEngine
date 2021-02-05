@@ -60,19 +60,22 @@ if config:
         # PCC_default = ''
         # EPR_default = ''
         # pwd_default = ''    
-    
-    # uploaded_file = st.sidebar.file_uploader("Add your commercials file")
-    # if uploaded_file is not None:
-    #     dmnRules = pyDMNrules.DMN()
-    #     status = dmnRules.load(uploaded_file)
-    #     if 'errors' in status:
-    #         print('nettingEngineDecisions.xlsx has errors', status['errors'])
-    #         # sys.exit(0)
-    #     else:
-    #         print('nettingEngineDecisions.xlsx loaded')
 
 if len(get_pccs())==0:
     st.sidebar.markdown('___No PCCs configured for search!___')
+
+## Load rules file
+file_status = ''
+uploaded_file = st.sidebar.file_uploader("Add your commercials file")
+if uploaded_file is not None:
+    dmnRules = pyDMNrules.DMN()
+    status = dmnRules.load(uploaded_file)
+    if 'errors' in status:
+        file_status = uploaded_file.name + ' has errors' + status['errors']
+        # sys.exit(0)
+    else:
+        file_status = uploaded_file.name + ' loaded'
+st.sidebar.write(file_status)
 
 
 ## Request compiler
@@ -99,12 +102,18 @@ if config:
     st.write(pccs)
 
 session_state = SessionState.get(results = pd.DataFrame())
+tempVals = 'totalPrice'
 if run:
     results = get_results(get_pccs(),  Origin, Destination, Departure, TripLength, Currency, PaxType)
+    if 'loaded' in file_status:
+        results = func.rulesmeup(results, dmnRules)
+        results = func.calculateNets(results, Currency)
+        tempVals = 'netPrice'
     session_state.results = results
 
 # if len(session_state.results)>0:
-t = func.pivot_ui(session_state.results, rows = ['carrier'], cols = ['pcc'], vals = ['totalPrice'], aggregatorName = 'Minimum')
+    
+t = func.pivot_ui(session_state.results, rows = ['carrier'], cols = ['pcc'], vals = [tempVals], aggregatorName = 'Minimum')
 st.markdown('## Results')
 with open(t.src) as t:
     components.html(t.read(), width = 1500, height = 1000, scrolling = True)
