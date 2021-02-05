@@ -40,7 +40,6 @@ def get_results(PccList, Origin, Destination, Departure, TripLength, Currency, P
     
     return results
 
-
 st.sidebar.markdown('### Sections')
 info = st.sidebar.checkbox('Read me')
 config = st.sidebar.checkbox('Configurations', value = True)
@@ -71,6 +70,9 @@ if config:
     #         # sys.exit(0)
     #     else:
     #         print('nettingEngineDecisions.xlsx loaded')
+
+if len(get_pccs())==0:
+    st.sidebar.markdown('___No PCCs configured for search!___')
 
 
 ## Request compiler
