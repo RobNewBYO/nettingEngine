@@ -194,7 +194,15 @@ help_text = '''
 ## Here are some notes on this tool
 
 This tool can run identical BFM calls against a list of PCCs that you authorize first. The raw results are returned in a pivot table where they can be compared.
+
+You can also upload a specific file containing commercials which is then used to net down the raw price (i.e. after commissions, segments etc).
+
 The parameters you can specify are fairly limited at the moment - if you would like more added, please contact rob.new@byojet.com.
+
+### Usage
+1. Authorize one or more PCCs using the credentials found in the linked sheet. You can make a comma-delimited list to authorize multiple at one time.
+2. (optional) Drop the 'nettingEngineDecisions.xlsx' file where it says to 'Add your commercials file'.
+3. Define your search parameters and click run. Once complete you'll be shown a pivot table of the results. You can dive further into the results by adding the unused variables in the left column.
 
 ### Special notes
 - Pax Type: default is ITX, which will also return the ADT fare. For domestic NZ, 'SPT' will return the Air NZ seat only fare, and will otherwise return ADT fares for other carriers. This tool has not yet been extended to CHD and INF pax types.
