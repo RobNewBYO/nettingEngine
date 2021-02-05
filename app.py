@@ -44,8 +44,6 @@ def get_results(PccList, Origin, Destination, Departure, TripLength, Currency, P
 st.sidebar.markdown('### Sections')
 info = st.sidebar.checkbox('Read me')
 config = st.sidebar.checkbox('Configurations', value = True)
-r = st.sidebar.empty()
-request = r.checkbox('Search Request')
 
 if config:
     st.sidebar.markdown('### Configuration')
@@ -74,11 +72,8 @@ if config:
     #     else:
     #         print('nettingEngineDecisions.xlsx loaded')
 
-if len(get_pccs())>0:
-    request = r.checkbox('Search Request', value = True)
 
 ## Request compiler
-# if request:
 st.sidebar.markdown('### Search Parameters')
 Origin = st.sidebar.text_input('3-digit origin airport','BNE')
 Destination = st.sidebar.text_input('3-digit destination airport','SYD')
