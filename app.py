@@ -2,7 +2,7 @@
 import os
 import platform
 if platform.system()=='Windows':
-    os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine_local/')
+    os.chdir('C:/Users/rob.new/Downloads/Applications/WPy64-3870/projects/nettingEngine/nettingEngine/')
 
 import pandas as pd
 import pyDMNrules
