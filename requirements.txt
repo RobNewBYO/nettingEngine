@@ -13,9 +13,12 @@ cffi==1.14.4
 chardet==4.0.0
 click==7.1.2
 colorama==0.4.4
+DateTime==4.3
 decorator==4.4.2
 defusedxml==0.6.0
+docutils==0.16
 entrypoints==0.3
+et-xmlfile==1.0.1
 gitdb==4.0.5
 GitPython==3.1.12
 idna==2.10
@@ -23,6 +26,7 @@ ipykernel==5.4.3
 ipython==7.19.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
+jdcal==1.4.1
 jedi==0.18.0
 Jinja2==2.11.2
 jsonschema==3.2.0
@@ -38,6 +42,7 @@ nbformat==5.1.2
 nest-asyncio==1.5.1
 notebook==6.2.0
 numpy==1.19.5
+openpyxl==3.0.6
 packaging==20.8
 pandas==1.2.1
 pandocfilters==1.4.3
@@ -51,9 +56,11 @@ protobuf==3.14.0
 pyarrow==3.0.0
 pycparser==2.20
 pydeck==0.5.0
+pyDMNrules==0.1.7
 Pygments==2.7.4
 pyparsing==2.4.7
 pyrsistent==0.17.3
+pySFeel==0.1.10
 python-dateutil==2.8.1
 pytz==2020.5
 ## pywin32==300
@@ -62,7 +69,9 @@ pyzmq==22.0.0
 requests==2.25.1
 Send2Trash==1.5.0
 six==1.15.0
+sly==0.4
 smmap==3.0.5
+statistics==1.0.3.5
 streamlit==0.75.0
 terminado==0.9.2
 testpath==0.4.4
@@ -77,3 +86,4 @@ watchdog==1.0.2
 wcwidth==0.2.5
 webencodings==0.5.1
 widgetsnbextension==3.5.1
+zope.interface==5.2.0
