@@ -106,10 +106,11 @@ if run:
     results = get_results(get_pccs(),  Origin, Destination, Departure, TripLength, Currency, PaxType)
     session_state.results = results
 
-t = func.pivot_ui(session_state.results, rows = ['carrier'], cols = ['pcc'], vals = ['totalamount'])
-st.markdown('## Results')
-with open(t.src) as t:
-    components.html(t.read(), width = 1500, height = 1000, scrolling = True)
+if len(session_state.results)>0:
+    t = func.pivot_ui(session_state.results, rows = ['carrier'], cols = ['pcc'], vals = ['totalamount'])
+    st.markdown('## Results')
+    with open(t.src) as t:
+        components.html(t.read(), width = 1500, height = 1000, scrolling = True)
 
 
 
