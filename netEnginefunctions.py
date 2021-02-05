@@ -210,6 +210,5 @@ The parameters you can specify are fairly limited at the moment - if you would l
 
 ### Planned improvements
 1. Parameter selection expansion.
-2. Netting rules - plan is to calculate nets using pyDMNrules library. This would be filled with commissions from the office DB for FCTG PCCs, and be manually maintained (at least for main carriers) for consolidators.
-3. Response scoring: find a way to measure how good each PCC is to create a prioritised list. 
+2. Response scoring: find a way to measure how good each PCC is to create a prioritised list. 
 '''
