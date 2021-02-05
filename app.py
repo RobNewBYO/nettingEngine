@@ -52,14 +52,13 @@ if config:
         )
     
     if st.sidebar.button('auth'):
-        PCC = auth_entry.split("|")[0]
-        EPR = auth_entry.split("|")[1]
-        pwd = auth_entry.split("|")[2]
-        temp_tkn = func.authme(PCC, EPR, pwd)
-        get_pccs().append({'PCC':PCC, 'Token': temp_tkn})
-        # PCC_default = ''
-        # EPR_default = ''
-        # pwd_default = ''    
+        auths = auth_entry.split(",")
+        for x in auths:
+            PCC = x.split("|")[0]
+            EPR = x.split("|")[1]
+            pwd = x.split("|")[2]
+            temp_tkn = func.authme(PCC, EPR, pwd)
+            get_pccs().append({'PCC':PCC, 'Token': temp_tkn})   
 
 if len(get_pccs())==0:
     st.sidebar.markdown('___No PCCs configured for search!___')
