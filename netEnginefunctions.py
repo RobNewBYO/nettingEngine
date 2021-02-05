@@ -149,9 +149,7 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
 
 ## Apply rules
 def rulesmeup(df, dmnRules):
-    keep_cols = ['pcc', 'carrier', 'totalPrice', 'baseFare', 'tax', 'originAirport', 'destinationAirport',
-           'departureDateTime', 'returnDateTime', 'numberOfSegments', 'cabinClass', 'route', 'originCountry',
-           'destinationCountry', 'tripType']
+    keep_cols = ['pcc','carrier','totalPrice','baseFare','tax','originAirport', 'destinationAirport', 'departureDateTime', 'returnDateTime', 'outb_flightnumbers', 'outb_duration', 'inb_flightnumbers', 'inb_duration', 'flightnumbers', 'numberOfSegments', 'cabinClass']
     
     df = df[keep_cols]
     
