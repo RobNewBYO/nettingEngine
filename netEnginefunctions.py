@@ -129,8 +129,11 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
                 results = results.append(temp, ignore_index = True)
         
         ## merge in locations
-        locs = pd.read_csv('locations.csv')
-        locs = locs[['AirportCode','CountryCode']]
+        airp = pd.read_csv('locations.csv')[['AirportCode','CountryCode']]
+        reg = pd.read_csv('iataRegions.csv')[['countryCode','regionCode']]
+        
+        locs = pd.merge(airp, reg, left_on = 'CountryCode', right_on = 'countryCode', how = 'left')
+        locs = locs[['AirportCode','CountryCode', 'regionCode']]
         locs = locs.drop_duplicates(subset = ['AirportCode'])
         
         results['route'] = results['originAirport']+"-"+results['destinationAirport']
@@ -138,10 +141,12 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
         results = pd.merge(results, locs, left_on = 'originAirport', right_on = 'AirportCode', how = 'left')
         results = results.drop(columns = ['AirportCode'])
         results.columns = results.columns.str.replace('CountryCode','originCountry')
+        results.columns = results.columns.str.replace('regionCode','originRegion')
         
         results = pd.merge(results, locs, left_on = 'destinationAirport', right_on = 'AirportCode', how = 'left')
         results = results.drop(columns = ['AirportCode'])
         results.columns = results.columns.str.replace('CountryCode','destinationCountry')
+        results.columns = results.columns.str.replace('regionCode','destinationRegion')
         
         results['tripType'] = np.where(results['originCountry']==results['destinationCountry'],'DOM', np.where(results['originCountry'].isin(['AU','NZ']) & results['destinationCountry'].isin(['AU','NZ']),'TT','INT'))
         
@@ -149,7 +154,7 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
 
 ## Apply rules
 def rulesmeup(df, dmnRules):
-    keep_cols = ['pcc','carrier','totalPrice','baseFare','tax','originAirport', 'destinationAirport', 'departureDateTime', 'returnDateTime', 'outb_flightnumbers', 'outb_duration', 'inb_flightnumbers', 'inb_duration', 'flightnumbers', 'numberOfSegments', 'cabinClass']
+    keep_cols = ['pcc','carrier','totalPrice','baseFare','tax','originAirport', 'originCountry', 'originRegion', 'destinationAirport', 'destinationCountry', 'destinationRegion', 'departureDateTime', 'returnDateTime', 'outb_flightnumbers', 'outb_duration', 'inb_flightnumbers', 'inb_duration', 'flightnumbers', 'numberOfSegments', 'cabinClass']
     
     df = df[keep_cols]
     
