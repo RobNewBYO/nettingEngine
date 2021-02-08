@@ -122,7 +122,7 @@ def getresponse(PCC, tkn, Origin, Destination, Departure, TripLength, Currency, 
                 inbduration = response['groupedItineraryResponse']['legDescs'][inb_ref-1]['elapsedTime']
                 flightnumbers = outb + "," + inb
                 totalPrice = x['pricingInformation'][0]['fare']['totalFare']['totalPrice']
-                baseFare = x['pricingInformation'][0]['fare']['totalFare']['baseFareAmount']
+                baseFare = x['pricingInformation'][0]['fare']['totalFare']['equivalentAmount']
                 tax = x['pricingInformation'][0]['fare']['totalFare']['totalTaxAmount']
                 temp = pd.DataFrame([[PCC, carrier, totalPrice, baseFare, tax, originAirport, destinationAirport, departureDateTime, returnDateTime, outb, outbduration, inb, inbduration, flightnumbers, numberOfSegments, cabinClass]], columns = colnames)
                 
