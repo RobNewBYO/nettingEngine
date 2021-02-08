@@ -60,21 +60,24 @@ if config:
             temp_tkn = func.authme(PCC, EPR, pwd)
             get_pccs().append({'PCC':PCC, 'Token': temp_tkn})   
 
-if len(get_pccs())==0:
-    st.sidebar.markdown('___No PCCs configured for search!___')
+    if len(get_pccs())==0:
+        st.sidebar.markdown('___No PCCs configured for search!___')
 
-## Load rules file
-file_status = ''
-uploaded_file = st.sidebar.file_uploader("Add your commercials file")
-if uploaded_file is not None:
-    dmnRules = pyDMNrules.DMN()
-    status = dmnRules.load(uploaded_file)
-    if 'errors' in status:
-        file_status = uploaded_file.name + ' has errors' + status['errors']
-        # sys.exit(0)
-    else:
-        file_status = uploaded_file.name + ' loaded'
-st.sidebar.write(file_status)
+    ## Load rules file
+    file_status = ''
+    st.sidebar.markdown(
+        """<a href="https://ppsdns-my.sharepoint.com/:x:/g/personal/rob_new_byojet_com/EcKjeJh-hB5HicL480bpAIgBhNa744XDU0BMpLl8vJo6hw?e=pXiYps" target="_blank">Current File</a>""",
+        unsafe_allow_html=True)
+    uploaded_file = st.sidebar.file_uploader("Add your commercials file")
+    if uploaded_file is not None:
+        dmnRules = pyDMNrules.DMN()
+        status = dmnRules.load(uploaded_file)
+        if 'errors' in status:
+            file_status = uploaded_file.name + ' has errors' + status['errors']
+            # sys.exit(0)
+        else:
+            file_status = uploaded_file.name + ' loaded'
+    st.sidebar.write(file_status)
 
 
 ## Request compiler
