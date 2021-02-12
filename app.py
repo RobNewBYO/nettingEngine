@@ -58,7 +58,7 @@ if config:
             EPR = x.split("|")[1]
             pwd = x.split("|")[2]
             temp_tkn = func.authme(PCC, EPR, pwd)
-            get_pccs().append({'PCC':PCC, 'Token': temp_tkn})   
+            get_pccs().append({'PCC':PCC, 'Token': temp_tkn})  
 
     if len(get_pccs())==0:
         st.sidebar.markdown('___No PCCs configured for search!___')
@@ -98,9 +98,10 @@ else:
     
 st.markdown(help_text)
 
+## PCCs table
+pccs = pd.DataFrame(get_pccs())
 if config:
     st.markdown('## PCC Authorization')
-    pccs = pd.DataFrame(get_pccs())
     st.write(pccs)
 
 session_state = SessionState.get(results = pd.DataFrame())
