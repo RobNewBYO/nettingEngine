@@ -112,6 +112,7 @@ if run:
         results = func.calculateNets(results, Currency)
         tempVals = 'netPrice'
     session_state.results = results
+    st.balloons()
 
 # if len(session_state.results)>0:
     
