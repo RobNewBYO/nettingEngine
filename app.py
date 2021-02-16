@@ -61,6 +61,7 @@ if config:
             get_pccs().append({'PCC':PCC, 'Token': temp_tkn})  
 
     if len(get_pccs())==0:
+        print("Detecting No PCCs configured for session_id " + session_id)
         st.sidebar.markdown('___No PCCs configured for search!___')
 
     ## Load rules file
