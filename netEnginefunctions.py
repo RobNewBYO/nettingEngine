@@ -5,9 +5,20 @@ import datetime
 import json
 import pandas as pd
 import numpy as np
+from itsdangerous import URLSafeSerializer
 from streamlit.report_thread import get_report_ctx
 ctx = get_report_ctx()
 session_id = ctx.session_id
+
+def unencryptme(key, filename = 'oids'):
+    s = URLSafeSerializer(key)
+    csv = pd.read_csv(filename + "_encrypted.csv")
+    market = s.loads(csv['strings'][0])
+    pcc = s.loads(csv['strings'][1])
+    epr = s.loads(csv['strings'][2])
+    pwd = s.loads(csv['strings'][3])
+    df = pd.DataFrame(list(zip(market, pcc, epr, pwd)), columns = ['market','pcc','epr','pwd'])
+    return df
 
 ## Basic base64 encoding
 def encodeme(message):
